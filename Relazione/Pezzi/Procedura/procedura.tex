@@ -65,11 +65,31 @@
 	
 	\subsubsection{Misura}
 	La misura della lunghezza d'onda ha sfruttato la possibilità di poter variare la posizione dello specchio mobile e quindi la differenza di cammino ottico dei raggi di luce. In questo modo era possibile controllare l'interferenza dei raggi luminosi e farli interferire in modo costruttivo o distruttivo. In particolare, affinché una frangia scura sullo schermo (corrispondente all'interferenza distruttiva) sostituisca una luminosa (interferenza costruttiva) è necessario spostare lo specchio di 
-	\[ \Delta x = \dfrac{\lambda}{4n_a} \]
+	\begin{equation}\label{delta}
+		\Delta x = \dfrac{\lambda}{4n_a}
+	\end{equation}
 	dove $ \lambda $ è la lunghezza d'onda e $ n_a $ è l'indice di rifrazione dell'aria. Inoltre affinché una frangia chiara sostituisse una scura era necessario un ulteriore spostamento $ \Delta x $, da cui, per far si che una frangia chiara venga sostituita dalla successiva era necessario uno spostamento di $ 2\Delta x $.
 	
-	Poichè però la lunghezza d'onda era poco più grande della sensibilità dello strumento (la sensibilità era di $ \SI{0.2}{\micro\meter} $ mentre la lunghezza d'onda era dell'ordine di grandezza di $ \SI{100}{\nano\meter} $) per ottenere una misura con un errore accettabile era necessario far scorrere molte (circa $ \num{200} $) frange e dividere lo spostamento finale per il numero di frange viste. Si otteneva così che:
-	\begin{equation}\label{\lambda}
-		contenuto...
+	Poiché però la lunghezza d'onda era poco più grande della sensibilità dello strumento (la sensibilità era di $ \SI{0.2}{\micro\meter} $ mentre la lunghezza d'onda era dell'ordine di grandezza di $ \SI{100}{\nano\meter} $) per ottenere una misura con un errore accettabile era necessario far scorrere molte (circa $ \num{200} $) frange e dividere lo spostamento finale per il numero di frange viste. In questo modo rigirando la formula \ref{delta} si otteneva che:
+	\begin{equation}\label{lambdana}
+		\lambda=\dfrac{2n_a\Delta x}{N_1}		
+	\end{equation}
+	dove $ N_1 $ è il numero di frange contate e le altre osservabili sono come prima.
+	
+	\subsection{Indice di rifrazione dell'aria}
+	Per la misura dell'indice di rifrazione dell'aria è stata usata la cameretta per il vuoto. Questa è stata posta in modo fisso tra la \emph{beam splitter} e lo specchio mobile ed è stata collegata ad una pompa per il vuoto. Il cambio dell'indice di rifrazione ha causato una differenza di cammino ottico. Una volta praticato il vuoto, attraverso una valvola a spillo si è lentamente fatto rientrare l'aria e contemporaneamente si è contato il numero di fasci di luce che passavano. Al termine del rientro dell'aria il cammino ottico del fascio di luce passante per la cameretta del vuoto è variato della quantità:
+	\begin{equation}\label{deltavuoto}
+		\Delta s = 2(n_a-1)d
+	\end{equation}
+	dove $ d $ è la lunghezza della cameretta e $ n_a $ è l'indice di rifrazione dell'aria. Da cui, dopo un susseguirsi di $ N_2 $ fasce luminose si trova che:
+	\begin{equation}\label{deltatotaria}
+		2(n_a-1)d=N_2\lambda
+	\end{equation}
+	dove $ N_2 $ è il numero di frange contate e il resto delle costanti è come prima. Combinando quindi questa equazione con la \ref{lambdana} si trova che:
+	\begin{equation}\label{lambda}
+		\lambda=\dfrac{2d\Delta x}{N_1 d + N_2 \Delta x}
+	\end{equation}
+	\begin{equation}\label{na}
+		n_a=\dfrac{N_1 d}{N_1 d + N_2 \Delta x}
 	\end{equation}
 \end{document}
