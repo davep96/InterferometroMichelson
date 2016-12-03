@@ -39,11 +39,21 @@
 
 \usepackage{wrapfig}
 
-\usepackage{siunitx} % Per unità di misura in generale e la corretta rappresentazione dei numeri.
+\usepackage{siunitx} % Per unitï¿½ di misura in generale e la corretta rappresentazione dei numeri.
 
 \usepackage{gensymb} % Per il simbolo di gradi
 
 \begin{document}
 	\label{interf} %Label di una figura schematica di un interferometro
 	\label{strum} %Sezione strumentazione
+	
+	Per una corretta visualizzazione dei numeri, con le unitÃ  di misura e gli ordini di grandezza usare il pacchetto siunitx con i comandi:\\
+	
+		\SI{5}{\centi\meter}
+	\\
+		\SI{633e-9}{\meter}
+	\\
+		\num{6.022e23}
+	\\
+	Inoltre usiamo la convenzione internazionale per cui i decimali si separano con un punto per piacere.
 \end{document}
