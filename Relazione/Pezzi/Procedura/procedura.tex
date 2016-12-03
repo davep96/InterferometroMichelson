@@ -68,7 +68,7 @@
 	\begin{equation}\label{delta}
 		\Delta x = \dfrac{\lambda}{4n_a}
 	\end{equation}
-	dove $ \lambda $ è la lunghezza d'onda e $ n_a $ è l'indice di rifrazione dell'aria. Inoltre affinché una frangia chiara sostituisse una scura era necessario un ulteriore spostamento $ \Delta x $, da cui, per far si che una frangia chiara venga sostituita dalla successiva era necessario uno spostamento di $ 2\Delta x $.
+	dove $ \lambda $ è la lunghezza d'onda e $ n_a $ è l'indice di rifrazione dell'aria. Inoltre affinché una frangia chiara sostituisca una scura è necessario un ulteriore spostamento $ \Delta x $, da cui, per far si che una frangia chiara venga sostituita dalla successiva era necessario uno spostamento di $ 2\Delta x $.
 	
 	Poiché però la lunghezza d'onda era poco più grande della sensibilità dello strumento (la sensibilità era di $ \SI{0.2}{\micro\meter} $ mentre la lunghezza d'onda era dell'ordine di grandezza di $ \SI{100}{\nano\meter} $) per ottenere una misura con un errore accettabile era necessario far scorrere molte (circa $ \num{200} $) frange e dividere lo spostamento finale per il numero di frange viste. In questo modo rigirando la formula \ref{delta} si otteneva che:
 	\begin{equation}\label{lambdana}
@@ -77,7 +77,7 @@
 	dove $ N_1 $ è il numero di frange contate e le altre osservabili sono come prima.
 	
 	\subsection{Indice di rifrazione dell'aria}
-	Per la misura dell'indice di rifrazione dell'aria è stata usata la cameretta per il vuoto. Questa è stata posta in modo fisso tra la \emph{beam splitter} e lo specchio mobile ed è stata collegata ad una pompa per il vuoto. Il cambio dell'indice di rifrazione ha causato una differenza di cammino ottico. Una volta praticato il vuoto, attraverso una valvola a spillo si è lentamente fatto rientrare l'aria e contemporaneamente si è contato il numero di fasci di luce che passavano. Al termine del rientro dell'aria il cammino ottico del fascio di luce passante per la cameretta del vuoto è variato della quantità:
+	Per la misura dell'indice di rifrazione dell'aria è stata usata la cameretta per il vuoto. Questa è stata posta in modo fisso tra la \emph{beam splitter} e lo specchio mobile ed è stata collegata ad una pompa per il vuoto. Il cambio dell'indice di rifrazione ha causato una differenza di cammino ottico. Una volta praticato il vuoto, attraverso una valvola a spillo si è lentamente fatto rientrare l'aria e contemporaneamente si è contato il numero di frange di luce che si alternavano. Al termine del rientro dell'aria il cammino ottico del fascio di luce passante per la cameretta del vuoto è variato della quantità:
 	\begin{equation}\label{deltavuoto}
 		\Delta s = 2(n_a-1)d
 	\end{equation}
@@ -113,7 +113,10 @@
 	\end{equation}
 	Sostituendo la \ref{N1} nella \ref{delta1} e la \ref{N2} nella \ref{delta2} si ottiene quindi che:
 	\begin{equation}\label{deltas}
-		\Delta_2=2\Delta_1=2\dfrac{\lambda_2\lambda_1}{\lambda_2-\lambda_1}\approx2\dfrac{\lambda^2}{\lambda_2-\lambda_1}
+		\Delta_2=2\Delta_1=\dfrac{\lambda_2\lambda_1}{\lambda_2-\lambda_1}\approx\dfrac{\lambda^2}{\lambda_2-\lambda_1}
 	\end{equation}
 	dove $ \lambda $ è una stima di $ \lambda_1 $ o $ \lambda_2 $. Sperimentalmente però era molto più semplice distinguere le zone nella quale la diffusione era totale rispetto a quelle di interferenza. Quindi si è potuto facilmente misurare $ \Delta_2+\Delta_1=3\Delta_1 $ da cui si ottiene che:
+	\begin{equation}\label{delta-lambda}
+		\left(\lambda_2-\lambda_1\right)=\dfrac{3\lambda^2}{6\Delta_1}
+	\end{equation}
 \end{document}
