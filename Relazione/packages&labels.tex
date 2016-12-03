@@ -46,7 +46,20 @@
 \begin{document}
 	\label{interf} %Label di una figura schematica di un interferometro
 	\label{strum} %Sezione strumentazione
+	\label{calib} % subsubsection nella quale è descrtta la calibrazione dello specchio fisso
+	\label{lambda} %
 	
+	\begin{equation}\label{delta}
+	\Delta x = \dfrac{\lambda}{4n_a}
+	\end{equation}
+	
+	\begin{equation}\label{\lambda}
+	\lambda=\dfrac{2n_a\Delta x}{N_1}		
+	\end{equation}
+	
+	\begin{equation}\label{indice_aria}
+	2 (n_a - 1) d = N_2 \lambda
+	\end{equation}
 	Per una corretta visualizzazione dei numeri, con le unità di misura e gli ordini di grandezza usare il pacchetto siunitx con i comandi:\\
 	
 		\SI{5}{\centi\meter}
@@ -56,4 +69,7 @@
 		\num{6.022e23}
 	\\
 	Inoltre usiamo la convenzione internazionale per cui i decimali si separano con un punto per piacere.
+	
+
+	
 \end{document}
