@@ -1,0 +1,210 @@
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[italian]{babel}
+
+\usepackage{graphicx}
+
+\usepackage{indentfirst}
+
+\usepackage{amsmath,amssymb}
+
+\usepackage{mathtools}
+
+\newcommand{\ddfrac}[2]{\ensuremath{\frac{\displaystyle #1}{\displaystyle #2}}}
+
+\usepackage{enumitem} 
+
+\newcommand{\virgolette}[1]{``#1''}
+
+\usepackage[margin=1in]{geometry} %Smaller margins
+
+\usepackage{lmodern} %Vector PDF
+
+\usepackage{siunitx}
+
+\usepackage{xcolor}
+
+\usepackage{colortbl}
+
+\usepackage{multirow}
+
+\usepackage{rotating}
+
+\usepackage{booktabs}
+
+\usepackage{longtable}
+
+\usepackage{graphicx}
+\graphicspath{ {../../Immagini/} }
+
+\usepackage{wrapfig}
+
+\usepackage{siunitx} % Per unit� di misura in generale e la corretta rappresentazione dei numeri.
+
+\usepackage{gensymb} % Per il simbolo di gradi
+
+\begin{document}
+
+	\section{Analisi dati}
+	
+	\subsection{Parti 1 e 2}
+	Veniamo ora all'analisi dati. Come spiegato in introduzione per trovare i valori della lunghezza d'onda del laser $\lambda$ e l'indice di rifrazione dell'aria $n _a$ occorre risolvere il sistema
+	
+	\begin{equation}
+		\begin{cases}
+			2n _a \Delta x = N _1 \lambda \\ 2(n_a -1)d =N_2 \lambda
+		\end{cases}	
+	\end{equation}
+	
+	Dove le misure prese di $\Delta x$ e $N _1$ sono elencate in tabella \ref{deltax}.
+	
+	\begin{table}[htbp]
+  \centering
+  \caption{Le cinque misure eseguite di $\Delta x$ e del relativo conteggio $N _1$}
+    \begin{tabular}{rrrr}
+    \bottomrule
+    \rowcolor[rgb]{ .267,  .447,  .769} \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$x _i$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$x _f$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\Delta x$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$N _1$}}} \\
+    \toprule
+   \rowcolor[rgb]{ .851,  .851,  .851} 0.01050 & 0.01021 & 5.8E-05 & 184 \\
+    0.01050 & 0.01017 & 6.6E-05 & 207 \\
+    \rowcolor[rgb]{ .851,  .851,  .851} 0.01050 & 0.01018 & 6.4E-05 & 203 \\
+    0.01050 & 0.01034 & 3.2E-05 & 101 \\
+    \rowcolor[rgb]{ .851,  .851,  .851} 0.01050 & 0.01018 & 6.4E-05 & 203 \\
+    \toprule
+    \end{tabular}%
+  \label{deltax}%
+\end{table}%
+	
+	Come descritto nella sezione sulla procedura la differenza fra $x _i$ e $x _f$ è stata divisa per 5. Le misure $N _2$ dei conteggi delle frange all'aumentare dell'aria presente nella camera si veda la tabella \ref{N2}.
+	
+\begin{table}[htbp]
+  \centering
+  \caption{Valori di $N _2$}
+    \begin{tabular}{|lrrrr|}
+    \bottomrule
+    \rowcolor[rgb]{ .267,  .447,  .769} \textcolor[rgb]{ 1,  1,  1}{\textbf{$N _2$}} & \cellcolor[rgb]{ 1,  1,  1} 42 & \cellcolor[rgb]{ 1,  1,  1} 41.5 & \cellcolor[rgb]{ 1,  1,  1} 42.5 & \cellcolor[rgb]{ 1,  1,  1} 42 \\
+    \toprule
+    \end{tabular}%
+  \label{N2}%
+\end{table}%
+
+	I valori decimali sono stati inseriti come segue: si è considerata mezza misura quando il conteggio cominciava con una frangia chiara e terminava con una frangia scura o viceversa. Non tenere conto di tali casi avrebbe prodotto per 4 volte la stessa misura quando invece i conteggi differivano. Quanto a $d$ si è tenuta in conto la misura dichiarata dal costruttore, ossia $d = \SI{0.05}{m}$, con errore trascurabile in confronto agli errori delle nostre misure.
+	Poiché le misure prima di $\Delta x$ e $N _1$ poi di $N _2$ sono state fatte in momenti diversi dell'esperimento con apparati sperimentali modificati tra una procedura e l'altra, le misure potrebbero non avere alcuna relazione e non avrebbe alcun senso calcolare, risolvendo tante volte il sistema, più valori di $\lambda$ e $n _a$ da triple di valori $\Delta x$, $N _1$ e $N _2$ per poi calcolarne media ed errore, anche perché le misure sono in numero diverso. Ha invece molto più senso calcolare un valore finale per ciascuna delle due parti e risolvere il sistema per una sola tripla di valori, rispettando così la correlazione delle misure.
+	Le soluzioni del sistema sono in generale:
+	
+	\begin{equation}
+		\begin{cases}
+			n_a = \ddfrac{dN_1}{dN_1 - N_2 \Delta x} \\ \\ \lambda = \ddfrac{2 d \Delta x}{d N _1 - N_2 \Delta x}
+		\end{cases}
+	\end{equation}
+
+	Vi è tuttavia un problema: le variabili $N _1$ e $\Delta x$ sono strettamente correlate, non avrebbe senso calcolare la media degli $N _1$ e dei $\Delta x$, poiché è assolutamente ovvio che per un $\Delta x$ minore si avrà un $N _1$ minore. Questo problema si risolve molto facilmente riscrivendo le soluzioni del sistema come
+	
+	\begin{equation}
+		\begin{cases}
+			n_a = \ddfrac{d}{d - N_2 \frac{\Delta x}{N _1}} \\ \lambda = \ddfrac{2 d \frac{\Delta x}{N _1}}{d - N_2 \frac{\Delta x}{N _1}}
+		\end{cases}
+	\end{equation}
+
+	e considerando quindi come risultato della prima parte dell'esperimento il rapporto $\frac{\Delta x}{N_1}$. In tabella \ref{rapporti} riportiamo i valori dei rapporti.
+	
+	\begin{table}[htbp]
+  \centering
+  \caption{I valori dei rapporti con i relativi errori}
+    \begin{tabular}{rr}
+    \bottomrule
+    \rowcolor[rgb]{ .267,  .447,  .769} \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\Delta x/N1$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\sigma$(m)}}} \\
+    \toprule
+    \rowcolor[rgb]{ .851,  .851,  .851} 3.152E-07 & 5.7E-09 \\
+    3.188E-07 & 5.1E-09 \\
+    \rowcolor[rgb]{ .851,  .851,  .851} 3.153E-07 & 5.2E-09 \\
+    3.168E-07 & 1.0E-08 \\
+    \rowcolor[rgb]{ .851,  .851,  .851} 3.153E-07 & 5.2E-09 \\
+    \toprule
+    \end{tabular}%
+  \label{rapporti}%
+\end{table}%
+
+	Gli errori sono stati calcolati con la seguente formula, ottenuta per propagazione degli errori
+	
+	\begin{equation}
+	\sigma _{\frac{\Delta x}{N _1}} = \sqrt{\left( \frac{\sigma _{\Delta x}}{N_1} \right) ^2 + \left( \frac{\Delta x \cdot \sigma _{N_1}}{N_1 ^2} \right) ^2}
+	\end{equation}
+	
+	Dove $\sigma _{\Delta x} = \SI{1E-06}{m}$ e $\sigma _{N_1} = 1$. Quest'ultimo errore è stato stimato tale in quanto contando le frange in tre, sistematicamente due contavano lo stesso numero mentre la misura del terzo differiva per un'unità. Su un così alto numero di frange abbiamo preferito non trascurare l'errore sul conteggio mentre per $N _2$ potremo trascurarlo in quanto il conteggio sensibilmente minore riduce di molto la possibilità di fare errori. I valori dei rapporti risultano tutti compatibili con una $z$ massima di $0.52$.
+	A questo punto si può stimare il valore del rapporto e il relativo errore attraverso una media pesata: $$\frac{\Delta x}{N _1} = (\num{3.163} \pm \num{0.025}) \times 10 ^{-7} \text{m}$$. Quanto a $N _2$ come già detto, si trascurerà un errore sul conteggio e come errore si considererà la deviazione standard ($N _2 = 42 \pm 0.41$). Si può a questo punto calcolare i valori di $\lambda$ e di $n _a$ e calcolare i loro errori propagando le soluzioni del sistema riscritto nella seconda forma. Per eccessiva lunghezza si ometteranno le formule degli errori di $n _a$ e $\lambda$.
+	
+	\begin{equation}
+		\begin{cases}
+			\lambda = 632.7 \pm 5.1 \ \text{nm} \\ n_a = \num{1.0002657} \pm \num{0.0000034}
+		\end{cases}
+	\end{equation}
+
+	Mentre il valore di $\lambda$ è di gran lunga compatibile con quello dato dal costruttore di $633 \ \text{nm}$ ($z = 0.063$), quello di $n _a$ non risulta compatibile con quello noto di $1.0002926$.
+	Sapendo che quello noto è calcolato in condizioni di temperatura e pressione standard si può applicare una correzione in base alla temperatura (la pressione a Milano è moto prossima a quella in condizioni standard).
+	Per una temperatura pari a $24.2 \celsius$, come indicata su un termometro di laboratorio, il valore noto di $n _a$ è di $1.0002835$ ma anche questo valore non risulta compatibile con quello calcolato ($z = 5.31$).
+	Escludendo la possibilità di un errore sistematico la discrepanza è probabilmente dovuta alla composizione e umidità dell'aria nel laboratorio, sicuramente molto diverse da quelle dell'aria secca per cui è stato calcolato il valore noto di $n _a$.
+	
+	\subsection{Parte 3}
+	Come si sarà intuito dalla descrizione della procedura dell'esperimento questa parte è particolarmente breve. Per via di considerazioni teoriche precedentemente esposte la lunghezza del pacchetto d'onda viene a coincidere esattamente con il valore $\Delta x$ della misura. La misura ha prodotto per 4 volte il risultato seguente (spegnendo e riaccendendo ogni volta la lampada):
+	
+	\begin{table}[htbp]
+  \centering
+  \caption{Le cinque misure eseguite di $\Delta x$ e del relativo conteggio $N _1$}
+    \begin{tabular}{rrrr}
+    \bottomrule
+    \rowcolor[rgb]{ .267,  .447,  .769} \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$x _i$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$x _f$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\Delta x$ (m)}}} \\
+    \toprule
+    0.01518 & 0.01521 & 6E-06 \\
+    \end{tabular}%
+\end{table}%
+
+	lasciando chiaramente intendere che la misura richiederebbe uno strumento più sensibile. Essendo la deviazione standard nulla si assume come errore la sensibilità dello strumento, da cui il valore completo della misura è $$L _p = 6 \pm 1 \ \mu \text{m}.$$
+
+	Quanto alla misura del pacchetto con un filtro, purtroppo la scarsità di luminosità e le condizioni di laboratorio presenti (oltre al fatto che l'unico filtro disponibile fosse quello viola) ci hanno lasciato vedere solamente che la misura del pacchetto d'onda fosse assai simile a quello della luce bianca, ma non abbiamo potuto fare considerazioni su una leggera differenza di lunghezza.
+
+	\subsection{Parte 4}
+	
+	Poiché ci è stato chiesto di lasciare il laboratorio mezz'ora prima, anche questa parte risulterà particolarmente breve: abbiamo potuto eseguire una sola misura. Misurando le posizioni di due luci diffuse contigue e misurando la differenza tra la prima e l'ultima abbiamo potuto misurare, come descritto nella sezione sulla procedura, la differenza di lunghezza del doppietto del sodio. In tabella \ref{alternanze} ci sono le misure delle alternanza contigue misurate con, nell'ultima colonna, il valore di $\lambda$ calcolato da quell'unica alternanza secondo la formula $\Delta \lambda = m \lambda ^2 / (2 \Delta x)$. $m$ indica il numero di alternanze contate tra $x _i$ e $x_f$; nella prima riga sono state contate due alternanze per via della difficoltà di individuare la condizione di luce diffusa nel mezzo in poco tempo, oltre al fatto che data la scarsa sensibilità dello strumento non avrebbe dato alcun informazione una sola alternanza. $\lambda ^2$ indica la media tra le due lunghezze d'onda del doppietto del sodio al quadrato, ossia $\lambda = \SI{5.8923}{\meter}$.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Misure delle alternanze per il doppietto del sodio}
+    \begin{tabular}{rrrrr}
+    \bottomrule
+    \rowcolor[rgb]{ .267,  .447,  .769} \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$x _i$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$x _f$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\Delta x$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{m}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\Delta \lambda$ (m)}}} \\
+    \toprule
+    \rowcolor[rgb]{ .851,  .851,  .851} 0.02042 & 0.01745 & 0.000594 & 2     & 5.846E-10 \\
+    0.01745 & 0.01603 & 0.000284 & 1     & 6.114E-10 \\
+    \rowcolor[rgb]{ .851,  .851,  .851} 0.01602 & 0.01456 & 0.000292 & 1     & 5.946E-10 \\
+    \toprule
+    \end{tabular}%
+  \label{alternanze}%
+\end{table}%7
+
+	I valori di $\Delta \lambda$ sono riportati senza errore perché l'unica misura che conta è in realtà quella che tiene conto di tutte e quattro le alternanze contate, ossia della misura seguente.
+	
+	\begin{table}[htbp]
+  \centering
+    \begin{tabular}{rrrrrr}
+    \bottomrule
+    \rowcolor[rgb]{ .267,  .447,  .769} \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$x _i$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$x _f$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\Delta x$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{m}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\Delta \lambda$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\sigma _{\Delta \lambda}$ (m)}}} \\
+    \toprule
+    0.02042 & 0.01456 & 0.001172 & 4     & 5.9261E-10 & 5.1E-13 \\
+    \toprule
+    \end{tabular}%
+\end{table}%
+
+	dove $\sigma _{\Delta \lambda}$ è stata calcolata attraverso $$\sigma _{\Delta \lambda} = \frac{m \lambda^2 \sigma _{\Delta x}}{2 (\Delta x) ^2}$$.
+	
+	Verifichiamo la compatibilità con il valore teorico. Lo spettro del sodio teorico presenta come lunghezze d'onda del doppietto $\lambda _1 = \SI{588.996}{\nano \meter}$ e $\lambda _2 = \SI{589.593}{\nano \meter}$, da cui $\Delta \lambda = \SI{5.97e-10}{\meter}$. In tal caso $z = 8.69$, da cui le misure non risulterebbero compatibili, nonostante la misura sembri un'ottima misura. La ragione di tale discrepanza sta nel fatto che è assai difficile su un intervallo così lungo individuare il punto in cui la luce è perfettamente diffusa o per cui le frange sono perfettamente nette, da cui l'errore $d_{\Delta x}$ è assai sottostimato. Aumentandolo di un fattore $15$, ossia considerando come intervallo di indecisione una trentina di $\mu \text{m}$, il ché è assai più realistico, si avrebbe un errore $\sigma _{\Delta \lambda} = \SI{7.6E-12}{\meter}$ che già darebbe $z = 0.579$, che riflette di più la qualità della misura.
+	
+	\section{Conclusione}
+	Complessivamente l'esperimento è riuscito molto bene: nella maggior parte dei casi le misure sono state assai precise, pulite e compatibili con quelle teoriche. L'analisi dati ha cercato di tenere conto di ogni possibile errore e ciascuna considerazione ha avuto una giustificazione naturale. L'unica cosa che rimane leggermente oscura (anche se è già stata data una spiegazione assai plausibile) è la misura del coefficiente di rifrazione $n _a$. Come ulteriore supporto del fatto che la discrepanza non sia conseguenza di un errore sistematico è che la misura del gruppo di laboratorio a noi vicino venisse molto simile alla nostra, per cui è molto probabile che la causa sia un valore assai alterato delle condizioni di umidità dell'aria (ricordiamo inoltre che quel giorno pioveva abbastanza). 
+	
+\end{document}
