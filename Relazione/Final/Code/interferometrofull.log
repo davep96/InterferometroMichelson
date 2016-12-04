@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.12)  4 DEC 2016 11:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.12)  4 DEC 2016 11:46
 entering extended mode
-**./strumentazione.tex
-(strumentazione.tex
+**./interferometrofull.tex
+(interferometrofull.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -929,8 +929,8 @@ Package: wrapfig 2003/01/31  v 3.6
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\was\gensymb.sty"
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
-(strumentazione.aux)
-\openout1 = `strumentazione.aux'.
+(interferometrofull.aux)
+\openout1 = `interferometrofull.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
@@ -945,12 +945,14 @@ LaTeX Font Info:    ... okay on input line 47.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 47.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Info: Redefining \it@ocap on input line 47.
 LaTeX Info: Redefining \it@ccap on input line 47.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count165
 \scratchdimen=\dimen186
@@ -1183,41 +1185,59 @@ LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 47.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-<../../Immagini/interf.jpg, id=1, 401.5pt x 227.85126pt>
+) [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<../../Immagini/apparato.png, id=11, 1604.99625pt x 902.37125pt>
+File: ../../Immagini/apparato.png Graphic file (type png)
+
+<use ../../Immagini/apparato.png>
+Package pdftex.def Info: ../../Immagini/apparato.png used on input line 86.
+(pdftex.def)             Requested size: 217.42265pt x 122.22794pt.
+
+<../../Immagini/interf.jpg, id=13, 401.5pt x 227.85126pt>
 File: ../../Immagini/interf.jpg Graphic file (type jpg)
 
 <use ../../Immagini/interf.jpg>
-Package pdftex.def Info: ../../Immagini/interf.jpg used on input line 52.
-(pdftex.def)             Requested size: 217.42265pt x 123.38899pt.
+Package pdftex.def Info: ../../Immagini/interf.jpg used on input line 116.
+(pdftex.def)             Requested size: 430.31812pt x 244.22258pt.
+ [1 <../../Immagini/apparato.png>] [2 <../../Immagini/interf.jpg>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 146.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 155.
 
-Overfull \hbox (5.08078pt too wide) in paragraph at lines 57--62
-[]\T1/lmr/m/n/10.95 Questo è sta-
- []
-
-[1
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <../../Immagini/interf.jpg
->] [2] (strumentazione.aux) ) 
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [3] [4] [5] (interferometrofull.aux) ) 
 Here is how much of TeX's memory you used:
- 14956 strings out of 493334
- 285443 string characters out of 3136672
- 316317 words of memory out of 3000000
- 18280 multiletter control sequences out of 15000+200000
- 55312 words of font info for 52 fonts, out of 3000000 for 9000
+ 15052 strings out of 493334
+ 287100 string characters out of 3136672
+ 318457 words of memory out of 3000000
+ 18357 multiletter control sequences out of 15000+200000
+ 104726 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,7n,42p,10367b,875s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips
-/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.e
-nc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/
-lmsy8.pfb>
-Output written on strumentazione.pdf (2 pages, 132542 bytes).
+ 40i,9n,42p,10371b,875s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/font
+s/enc/dvips/lm/lm-ec.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/
+lm-ts1.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/l
+mmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/lm/lmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri10.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri9.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/lm/lmsy8.pfb>
+Output written on interferometrofull.pdf (6 pages, 2424970 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
+ 96 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
