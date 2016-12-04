@@ -47,19 +47,52 @@
 	\label{interf} %Label di una figura schematica di un interferometro
 	\label{strum} %Sezione strumentazione
 	\label{calib} % subsubsection nella quale è descrtta la calibrazione dello specchio fisso
-	\label{lambda} %
 	
 	\begin{equation}\label{delta}
 	\Delta x = \dfrac{\lambda}{4n_a}
 	\end{equation}
 	
-	\begin{equation}\label{\lambda}
+	\begin{equation}\label{lambdana}
 	\lambda=\dfrac{2n_a\Delta x}{N_1}		
+	\end{equation}
+	
+	\begin{equation}\label{deltavuoto}
+	\Delta s = 2(n_a-1)d
+	\end{equation}
+	
+	\begin{equation}\label{lambda}
+	\lambda=\dfrac{2d\Delta x}{N_1 d + N_2 \Delta x}
+	\end{equation}
+	
+	\begin{equation}\label{na}
+	n_a=\dfrac{N_1 d}{N_1 d + N_2 \Delta x}
 	\end{equation}
 	
 	\begin{equation}\label{indice_aria}
 	2 (n_a - 1) d = N_2 \lambda
 	\end{equation}
+	
+	\begin{equation}\label{delta1}
+	\Delta_1=2N_1\frac{\lambda_1}{2}=(2N_1+1)\frac{\lambda_2}{2}
+	\end{equation}
+	
+	\begin{equation}\label{N1}
+	N_1=\dfrac{\lambda_1}{2\left(\lambda_2-\lambda_2\right)}\;.
+	\end{equation}
+	
+	\begin{equation}\label{delta2}
+	\Delta_2=(2N_2+1)\frac{\lambda_1}{2}=2N_2\frac{\lambda_2}{2}
+	\end{equation}
+	
+	\begin{equation}\label{N2}
+	N_2=\dfrac{\lambda_1}{\left(\lambda_2-\lambda_2\right)}=2N_1 \, .
+	\end{equation}
+	
+	\begin{equation}\label{deltas}
+	\Delta_2=2\Delta_1=2\dfrac{\lambda_2\lambda_1}{\lambda_2-\lambda_1}\approx2\dfrac{\lambda^2}{\lambda_2-\lambda_1}
+	\end{equation}
+	
+	
 	Per una corretta visualizzazione dei numeri, con le unità di misura e gli ordini di grandezza usare il pacchetto siunitx con i comandi:\\
 	
 		\SI{5}{\centi\meter}

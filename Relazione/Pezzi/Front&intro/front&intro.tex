@@ -35,7 +35,7 @@
 \usepackage{longtable}
 
 \usepackage{graphicx}
-\graphicspath{ {Images/} }
+\graphicspath{ {../../Immagini/} }
 
 \usepackage{wrapfig}
 
@@ -60,7 +60,7 @@
 	\vfill
 
 	\begin{abstract}
-	Di seguito vengono riportate la procedura sperimentale, e l'analisi dei dati raccolti relaivi a un esperimento compiuto con un Interferometro di Michelson. In particolare tramite il calcolo delle frange di interferenza dell'immagine prodotta viene determinata la lunghezza d'onda della luce emessa da un laser monocromatico. Altre grandezze fisiche rilevanti che questo apparato consente di mettere in evidenza sono l'indice di rifrazione dell'aria, la lunghezza dei pacchetti d'onda emessi da luce non moncromatica, e la differenza di lunghezza d'onda tra sorgenti differenti, nello specifico l'analisi Ã¨ relativa al doppietto di sodio. Per ugnuna di queste grandezze vengono riportate procedure sperimentali e risultati comprensivi di errore.
+	Di seguito vengono riportate la procedura sperimentale, e l'analisi dei dati raccolti relativi a un esperimento compiuto con un Interferometro di Michelson. In particolare tramite il calcolo delle frange di interferenza dell'immagine prodotta viene determinata la lunghezza d'onda della luce emessa da un laser monocromatico. Altre grandezze fisiche rilevanti che questo apparato consente di mettere in evidenza sono l'indice di rifrazione dell'aria, la lunghezza dei pacchetti d'onda emessi da luce non monocromatica, e la differenza di lunghezza d'onda tra sorgenti differenti, nello specifico l'analisi Ã¨ relativa al doppietto di sodio. Per ognuna di queste grandezze vengono riportate procedure sperimentali e risultati comprensivi di errore.
 	\end{abstract}
 
 
@@ -72,4 +72,25 @@
 \newpage
 
 \section{Introduzione}
+
+ di Michelson è uno strumento che sfrutta alcune proprietà  delle radiazioni luminose per metterne in evidenza alcune caratteristiche. In particolare sfruttando una combinazione di specchi semi-riflettenti e altri completamente riflettenti, come descritto nella sezione \ref{strum} è possibile individuare la lunghezza d'onda di una particolare sorgente a partire dalla figura di interferenza che risulta.	
+ 
+ La relazione che lega infatti la lunghezza d'onda $\lambda$ della sorgente, alla figura che si osserva muovendo uno dei due specchi riflettenti è la seguente:
+ \begin{equation}\label{lambda}
+ \lambda=\dfrac{2n_a\Delta x}{N_1}
+ \end{equation}
+ dove $n_a$ rappresenta l'indice di rifrazione dell'aria, $\Delta x$ indica lo spostamento di una delle due lenti e $N_1$ è il numero di massimi (o equivalentemente minimi) osservati mentre si spostava lo specchio di $\Delta x$.
+ 
+ Quello che si osserva è che questa relazione consente di calcolare il valore di $\lambda$ a patto di conoscere il valore dell'indice di rifrazione $n_a$. Questo può a sua volta essere ricavato utilizzando una cameretta per il vuoto di lunghezza $d$ nota e contando le frange che si susseguono quando questa viene riportata alle condizioni dell'ambiente circostante. Vale infatti la relazione:
+ \begin{equation}\label{indice_aria}
+ 2 (n_a - 1) d = N_2 \lambda
+ \end{equation}
+ dove $1$ è l'indice di rifrazione del vuoto, e $N_2$ è il numero di frange che si sono susseguite.
+ 
+ Mettendo a sistema \ref{lambda} e \ref{indice_aria} si ricavano i valori sia di $\lambda$ che di $n_a$.
+ 
+ Queste relazioni sono state ricavate dall'ipotesi che la luce emessa dalla sorgente nell'interferometro fosse monocromatica. Per luce non monocromatica, come una sorgente \virgolette{bianca} tramite un interferometro è possibile ricavare la lunghezza del pacchetto d'onda, ossia di una parte coerente con se stessa del treno d'onda. Attraverso questa strumentazione è possibile osservare in maniera diretta la lunghezza di un pacchetto di luce emessa.
+ 
+ In modo simile è anche possibile risolvere due lunghezze d'onda molto vicine tra loro. Sfruttando relazioni descritte nella sezione \ref{proc}, siamo infatti stati in grado di determinare la differenza delle lunghezze d'onda dei due raggi più luminosi dello spettro del sodio.
+
 \end{document}
